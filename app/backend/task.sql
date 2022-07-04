@@ -1,0 +1,12 @@
+DROP DATABASE IF EXISTS Ebyrt;
+
+CREATE DATABASE Ebyrt;
+
+USE Ebyrt;
+
+CREATE TABLE Ebyrt.tasks (
+	id INT NOT NULL AUTO_INCREMENT,
+    task VARCHAR(30),
+    taskStatus VARCHAR(30),
+    PRIMARY KEY(id)
+) ENGINE = INNODB;
