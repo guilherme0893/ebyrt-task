@@ -8,7 +8,7 @@ const taskMock = [
     id: 2,
     task: 'Brush teeth',
     taskStatus: 'ongoing',
-  }
+  },
 ];
 
 const singleTaskMock = {
