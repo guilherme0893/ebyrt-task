@@ -5,8 +5,8 @@ const getAll = async () => {
   return tasks;
 };
 
-const createTask = async({ task, taskStatus }) => {
-  const newTask = await this.taskModel.createTask({ task, taskStatus });
+const createTask = async (task, taskStatus) => {
+  const newTask = await taskModel.createTask(task, taskStatus);
   return newTask;
 };
 
