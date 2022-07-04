@@ -1,20 +1,19 @@
 const connection = require('./connection');
 
 const getAll = async () => {
-  const query = `SELECT * FROM Ebyrt.Tasks`;
+  const query = 'SELECT * FROM Ebyrt.tasks';
   const [tasks] = await connection.execute(query);
   return tasks;
 };
 
-const createTask = async ({ task, taskStatus} ) => {
-  const query = `INSERT INTO Ebyrt.Tasks (task, taskStatus) VALUES(?,?)`;
+const createTask = async (task, taskStatus) => {
+  const query = 'INSERT INTO Ebyrt.tasks (task, taskStatus) VALUES (?,?)';
   const [newTask] = await connection.execute(query, [task, taskStatus]);
-  const newTaskCreated = {
-    id: task.insertId,
+  return {
+    id: newTask.insertId,
     task,
     taskStatus,
-  }
-  return newTaskCreated;
+  };
 };
 
 module.exports = {
