@@ -4,7 +4,7 @@ CREATE DATABASE Ebyrt;
 
 USE Ebyrt;
 
-CREATE TABLE Tasks (
+CREATE TABLE Ebyrt.tasks (
 	id INT NOT NULL AUTO_INCREMENT,
     task VARCHAR(30),
     taskStatus VARCHAR(30),
