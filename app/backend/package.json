@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon ./src/index.js",
-    "test": "mocha __tests__/**/**/*test.js --timeout 5000 --exit"
+    "test": "mocha __tests__/**/**/*test.js --timeout 5000 --exit",
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.js . --ext .js, .jsx"
   },
   "keywords": [],
   "author": "",
@@ -14,12 +15,17 @@
   "devDependencies": {
     "chai": "^4.3.6",
     "chai-http": "^4.3.0",
+    "eslint": "^8.19.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^28.1.2",
     "mocha": "^10.0.0",
     "nodemon": "^2.0.18",
     "sequelize-cli": "^6.4.1",
     "sinon": "^14.0.0"
   },
   "dependencies": {
+    "body-parser": "^1.20.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
