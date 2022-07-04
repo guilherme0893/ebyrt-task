@@ -4,30 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/index.ts",
-    "dev": "nodemon --watch \"./src/**\" ./src/index.ts",
-    "test": "mocha -r ts-node/register ./__tests__/**/**/*$NAME*.{test,spec}.ts -t 10000 --exi"
+    "start": "node src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "test": "mocha __tests__/**/**/*test.js --timeout 5000 --exit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@tsconfig/node16": "^1.0.3",
-    "@types/chai": "^4.3.1",
-    "@types/chai-http": "^4.2.0",
-    "@types/cors": "^2.8.12",
-    "@types/express": "^4.17.13",
-    "@types/mocha": "^9.1.1",
-    "@types/node": "^18.0.0",
-    "@types/sinon": "^10.0.12",
     "chai": "^4.3.6",
     "chai-http": "^4.3.0",
     "mocha": "^10.0.0",
     "nodemon": "^2.0.18",
-    "sinon": "^14.0.0",
-    "ts-node": "^10.8.1",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^4.7.4"
+    "sequelize-cli": "^6.4.1",
+    "sinon": "^14.0.0"
   },
   "dependencies": {
     "cors": "^2.8.5",
